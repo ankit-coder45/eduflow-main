@@ -3,6 +3,8 @@ import { toast } from 'sonner';
 
 // Determine the API base URL based on the environment
 export const API_BASE_URL = (() => {
+
+  return 'http://localhost:5001/api'
   // Check if we're in production build
   const isProduction = import.meta.env.MODE === 'production';
   
@@ -25,8 +27,8 @@ export const API_BASE_URL = (() => {
   }
   
   // Default fallback for local development
-  console.log('Using default development API path: http://localhost:5000/api');
-  return 'http://localhost:5000/api';
+  console.log('Using default development API path: http://localhost:5001/api');
+  return 'http://localhost:5001/api';
 })();
 
 console.log('Final API Base URL:', API_BASE_URL);
